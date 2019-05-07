@@ -195,34 +195,19 @@ client.focused_inactive #2f343f #000000 #ffffff #484e50   #2f343f
 client.unfocused        #2f343f #000000 #ffffff #292d2e   #2f343f
 client.urgent           #ff0000 #000000 #ffffff #900000   #ff0000
 client.placeholder      #ff0000 #000000 #ffffff #000000   #ff0000
-
 client.background       #ffffff
 
 focus_follows_mouse no
 
-# background
-#exec_always xsetroot -solid "#666666"
-exec_always --no-startup-id feh --bg-center .images/solid.jpg
-#exec_always --no-startup-id feh --bg-fill .images/gradient.png
-#exec_always --no-startup-id feh --bg-fill .images/black-and-white-black-and-white-conifer-763097.jpg
-#exec_always --no-startup-id feh --bg-fill .images/analogue-aperture-black-and-white-614077.jpg
-#exec_always --no-startup-id feh --bg-fill .images/background-blur-clean-531880.jpg
-#exec_always --no-startup-id feh --bg-fill .images/blue-sky-early-morning-grass-140954.jpg
-
+exec_always --no-startup-id feh --bg-center .images/2f343f.png
 exec_always --no-startup-id dunst
 exec_always --no-startup-id compton
 exec_always --no-startup-id mailnag
 exec_always --no-startup-id xset r rate 400 50
 exec_always --no-startup-id .config/polybar/launch.sh
 
-# foreground
 
-exec --no-startup-id i3-msg "workspace $ws01; append_layout /home/nlambert/.config/i3/layouts/workspace1.json;"
-exec --no-startup-id i3-msg "workspace $ws02; append_layout /home/nlambert/.config/i3/layouts/workspace2.json;"
-exec --no-startup-id i3-msg "workspace $ws03;"
-
-exec --no-startup-id i3-msg "exec /usr/bin/urxvt -e cava;"
-exec --no-startup-id i3-msg "exec /usr/bin/urxvt -e pulsemixer;"
-exec --no-startup-id i3-msg "exec /usr/bin/urxvt -e htop;"
-exec --no-startup-id i3-msg "exec /usr/bin/urxvt -e wavemon;"
-exec --no-startup-id i3-msg "exec /usr/bin/chromium"
+#exec --no-startup-id i3-msg "workspace $ws01; append_layout /home/nlambert/.config/i3/layouts/workspace1.json;"
+exec --no-startup-id i3-msg "workspace $ws01;"
+exec --no-startup-id /usr/bin/urxvt -e htop
+exec --no-startup-id mpc load http://somafm.com/m3u/groovesalad256.m3u
