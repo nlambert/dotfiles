@@ -1,0 +1,85 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2864,
+               "width": 2898,
+               "x": 40,
+               "y": 120
+            },
+            "name": "My Drive - Google Drive - Chromium",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Chromium$",
+                "instance": "^chromium$",
+                "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 848,
+               "width": 1280,
+               "x": 0,
+               "y": 0
+            },
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^URxvt$",
+                "instance": "^urxvt$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1372,
+               "width": 2628,
+               "x": 2708,
+               "y": 120
+            },
+            "name": "Google Hangouts",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Chromium$",
+                "instance": "^crx_nckgahadagoaajjgafhacjanaoiihapd$",
+                "title": "^Google\\ Hangouts$",
+                "window_role": "^pop\\-up$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

@@ -1,6 +1,28 @@
 // vim:ts=4:sw=4:et
 {
-    // splitv split container with 3 children
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 848,
+       "width": 1280,
+       "x": 0,
+       "y": 0
+    },
+    "name": "htop",
+    "percent": 0.5,
+    "swallows": [
+       {
+            "class": "^URxvt$",
+            "instance": "^urxvt$",
+            "title": "^htop$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
     "border": "pixel",
     "floating": "auto_off",
     "layout": "splitv",
@@ -9,21 +31,21 @@
     "nodes": [
         {
             "border": "pixel",
-            "current_border_width": 2,
+            "current_border_width": 0,
             "floating": "auto_off",
             "geometry": {
-               "height": 822,
-               "width": 1190,
+               "height": 848,
+               "width": 1280,
                "x": 0,
                "y": 0
             },
-            "name": "pulsemixer",
-            "percent": 0.333333333333333,
+            "name": "nlambert@archbox: ~",
+            "percent": 0.5,
             "swallows": [
                {
-               "class": "^URxvt$",
-               "instance": "^urxvt$",
-               "title": "^pulsemixer$"
+                    "class": "^URxvt$",
+                    "instance": "^urxvt$",
+                    "title": "^nlambert\\@archbox\\:\\ \\~$"
                }
             ],
             "type": "con"
@@ -33,65 +55,22 @@
             "current_border_width": 0,
             "floating": "auto_off",
             "geometry": {
-               "height": 822,
-               "width": 1190,
+               "height": 848,
+               "width": 1280,
                "x": 0,
                "y": 0
             },
-            "name": "wavemon",
-            "percent": 0.333333333333333,
+            "name": "i3-save-tree --workspace 1 > .config/i3/layouts/workspace1.json",
+            "percent": 0.5,
             "swallows": [
                {
-               "class": "^URxvt$",
-               "instance": "^urxvt$",
-               "title": "^wavemon$"
-               }
-            ],
-            "type": "con"
-        },
-        {
-            "border": "pixel",
-            "current_border_width": 0,
-            "floating": "auto_off",
-            "geometry": {
-               "height": 822,
-               "width": 1190,
-               "x": 0,
-               "y": 0
-            },
-            "name": "cava",
-            "percent": 0.333333333333333,
-            "swallows": [
-               {
-               "class": "^URxvt$",
-               "instance": "^urxvt$",
-               "title": "^cava$"
+                    "class": "^URxvt$",
+                    "instance": "^urxvt$",
+                    "title": "^i3\\-save\\-tree\\ \\-\\-workspace\\ 1\\ \\>\\ \\.config\\/i3\\/layouts\\/workspace1\\.json$"
                }
             ],
             "type": "con"
         }
     ]
-}
-
-{
-    "border": "pixel",
-    "current_border_width": 2,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 822,
-       "width": 1190,
-       "x": 0,
-       "y": 0
-    },
-    "name": "htop",
-    "percent": 0.5,
-    "swallows": [
-       {
-       "class": "^URxvt$",
-       "instance": "^urxvt$",
-       "title": "^htop$"
-       }
-    ],
-    "type": "con"
 }
 

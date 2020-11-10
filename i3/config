@@ -150,8 +150,8 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym $mod+Shift+s exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl poweroff
 
-#bindsym $mod+Shift+plus exec "i3-msg gaps inner current plus 10px"
-#bindsym $mod+Shift+minus exec "i3-msg gaps inner current minus 10px"
+bindsym $mod+Shift+plus exec "i3-msg gaps inner current plus 20px"
+bindsym $mod+Shift+minus exec "i3-msg gaps inner current minus 20px"
 bindsym $mod+r mode "resize"
 
 # resize window (you can also use the mouse for that)
@@ -179,35 +179,44 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-gaps top 70
-gaps inner 30
+gaps top 40
+gaps inner 20
 
 #hide_edge_borders smart
 default_border pixel 0
-default_floating_border pixel 0
+default_floating_border pixel 1
 
-for_window [window_role="GtkFileChooserDialog"] border pixel 1
-for_window [window_role="pop-up"] floating enable
+#for_window [window_role="pop-up"] floating enable
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
+for_window [title="qiv.*"] floating disable
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #2f343f #000000 #ffffff #2e9ef4   #2f343f
-client.focused_inactive #2f343f #000000 #ffffff #484e50   #2f343f
-client.unfocused        #2f343f #000000 #ffffff #292d2e   #2f343f
-client.urgent           #ff0000 #000000 #ffffff #900000   #ff0000
-client.placeholder      #ff0000 #000000 #ffffff #000000   #ff0000
+# class                 border   backgr  text    indicator child_border
+client.focused          #2f343f  #000000 #ffffff #2e9ef4   #2f343f
+client.focused_inactive #2f343f  #000000 #ffffff #484e50   #2f343f
+client.unfocused        #2f343f  #000000 #ffffff #292d2e   #2f343f
+client.urgent           #ff0000  #000000 #ffffff #900000   #ff0000
+client.placeholder      #ff0000  #000000 #ffffff #000000   #ff0000
 client.background       #ffffff
 
 focus_follows_mouse no
 
 exec_always --no-startup-id feh --bg-center .images/2f343f.png
-exec_always --no-startup-id dunst
-exec_always --no-startup-id compton
-exec_always --no-startup-id mailnag
+exec_always --no-startup-id picom
 exec_always --no-startup-id xset r rate 400 50
-exec_always --no-startup-id .config/polybar/launch.sh
-
+exec_always --no-startup-id .config/polybar/launch.sh &amp;
 
 #exec --no-startup-id i3-msg "workspace $ws01; append_layout /home/nlambert/.config/i3/layouts/workspace1.json;"
-exec --no-startup-id i3-msg "workspace $ws01;"
+#exec --no-startup-id i3-msg "workspace $ws01;"
 exec --no-startup-id /usr/bin/urxvt -e htop
 exec --no-startup-id mpc load http://somafm.com/m3u/groovesalad256.m3u
+exec --no-startup-id setxkbmap "us,ca(fr)" 
